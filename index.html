@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entergy - Powering Life</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .text-primary {
+            color: #d63384;
+        }
+        
+        .bg-primary {
+            background-color: #d63384;
+        }
+        
+        .hover\:bg-pink-700:hover {
+            background-color: #be185d;
+        }
+        
+        .mobile-menu {
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Header -->
+    <header class="bg-white border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-2">
+                    <div class="bg-gradient-to-r from-pink-500 to-pink-600 rounded-full w-8 h-8 flex items-center justify-center">
+                        <span class="text-white font-bold text-lg">E</span>
+                    </div>
+                    <span class="text-xl font-bold text-black">entergy</span>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center gap-8">
+                    <a href="#customers" class="text-sm text-gray-700 hover:text-primary font-medium">
+                        Customers
+                    </a>
+                    <a href="#communities" class="text-sm text-gray-700 hover:text-primary font-medium">
+                        Communities
+                    </a>
+                    <a href="#investors" class="text-sm text-gray-700 hover:text-primary font-medium">
+                        Investors
+                    </a>
+                    <a href="#operations" class="text-sm text-gray-700 hover:text-primary font-medium">
+                        Operations
+                    </a>
+                    <a href="#newsroom" class="text-sm text-gray-700 hover:text-primary font-medium">
+                        Newsroom
+                    </a>
+                    <a href="#about" class="text-sm text-gray-700 hover:text-primary font-medium">
+                        About us
+                    </a>
+                    <a href="#outages" class="text-sm text-gray-700 hover:text-primary font-medium">
+                        Outages
+                    </a>
+                </nav>
+
+                <!-- Right side -->
+                <div class="flex items-center gap-4">
+                    <button class="p-2 hover:bg-gray-100 rounded-lg">
+                        <i class="fas fa-search text-gray-700"></i>
+                    </button>
+                    <button class="bg-primary text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-pink-700 transition">
+                        myEntergy
+                    </button>
+                    
+                    <!-- Mobile menu button -->
+                    <button id="mobile-menu-button" class="md:hidden p-2 hover:bg-gray-100 rounded-lg">
+                        <i class="fas fa-bars text-gray-700"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="mobile-menu hidden md:hidden py-4 border-t border-gray-200">
+                <div class="flex flex-col space-y-4">
+                    <a href="#customers" class="text-sm text-gray-700 hover:text-primary font-medium">
+                        Customers
+                    </a>
+                    <a href="#communities" class="text-sm text-gray-700 hover:text-primary font-medium">
+                        Communities
+                    </a>
+                    <a href="#investors" class="text-sm text-gray-700 hover:text-primary font-medium">
+                        Investors
+                    </a>
+                    <a href="#operations" class="text-sm text-gray-700 hover:text-primary font-medium">
+                        Operations
+                    </a>
+                    <a href="#newsroom" class="text-sm text-gray-700 hover:text-primary font-medium">
+                        Newsroom
+                    </a>
+                    <a href="#about" class="text-sm text-gray-700 hover:text-primary font-medium">
+                        About us
+                    </a>
+                    <a href="#outages" class="text-sm text-gray-700 hover:text-primary font-medium">
+                        Outages
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-96 md:h-[500px] overflow-hidden bg-gray-900">
+        <div
+            class="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://images.unsplash.com/photo-1621905252507-b35492cc74b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80');"
+        ></div>
+        <div class="relative h-full flex items-center justify-center">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex items-center justify-center">
+                <div class="text-white max-w-xl flex items-center justify-center">
+                    <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-4 text-center flex">
+                        We're here<br />
+                        when you
+                        need us
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How can we help you? Section -->
+   <section class="bg-gray-50 py-16 md:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-2xl md:text-3xl font-bold text-primary mb-12 text-center">
+            How can we help you?
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-5 gap-6">
+            <!-- Card 1 -->
+            <div class="bg-white rounded-lg p-8 text-center hover:shadow-lg transition">
+                <div class="flex justify-center mb-4">
+                    <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Customer Service" class="w-12 h-12 rounded-full object-cover">
+                </div>
+                <h3 class="font-bold text-lg mb-2">myEntergy</h3>
+                <p class="text-sm text-primary font-semibold">View and pay your bill</p>
+            </div>
+
+            <!-- Card 2 - Outage -->
+            <div class="bg-white rounded-lg p-8 text-center hover:shadow-lg transition">
+                <div class="flex justify-center mb-4">
+                    <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Outage Map" class="w-12 h-12 rounded-full object-cover">
+                </div>
+                <h3 class="font-bold text-lg mb-2">Outage map</h3>
+                <p class="text-sm text-primary font-semibold">Check your power status</p>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-white rounded-lg p-8 text-center hover:shadow-lg transition">
+                <div class="flex justify-center mb-4">
+                    <img src="https://images.unsplash.com/photo-1502134249126-9f3755a50d78?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Storm Center" class="w-12 h-12 rounded-full object-cover">
+                </div>
+                <h3 class="font-bold text-lg mb-2">Storm Center</h3>
+                <p class="text-sm text-primary font-semibold">Be prepared for bad weather</p>
+            </div>
+
+            <!-- Card 4 - Moving -->
+            <div class="bg-white rounded-lg p-8 text-center hover:shadow-lg transition">
+                <div class="flex justify-center mb-4">
+                    <img  src="https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Moving Services" class="w-12 h-12 rounded-full object-cover">
+                </div>
+                <h3 class="font-bold text-lg mb-2">Moving?</h3>
+                <p class="text-sm text-primary font-semibold">Start, stop or move service</p>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="bg-white rounded-lg p-8 text-center hover:shadow-lg transition">
+                <div class="flex justify-center mb-4">
+                    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Careers" class="w-12 h-12 rounded-full object-cover">
+                </div>
+                <h3 class="font-bold text-lg mb-2">Jobs</h3>
+                <p class="text-sm text-primary font-semibold">Grow your career with us</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Featured Content Section -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl md:text-3xl font-bold text-primary mb-12">
+                Featured content
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white hover:shadow-lg transition">
+                    <div class="h-48 bg-gray-200 rounded-lg overflow-hidden mb-4">
+                        <img
+                            src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                            alt="Energy bill toolkit"
+                            class="w-full h-full object-cover"
+                        />
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Energy bill toolkit</h3>
+                    <p class="text-sm text-gray-600">
+                        Tools to help you save money with energy efficiency and bill assistance programs.
+                    </p>
+                    <a href="#" class="text-primary text-sm font-semibold mt-4 inline-flex items-center gap-1 hover:gap-2 transition">
+                        Read more <i class="fas fa-chevron-right text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white hover:shadow-lg transition">
+                    <div class="h-48 bg-gray-200 rounded-lg overflow-hidden mb-4">
+                        <img
+                            src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                            alt="Energy efficiency"
+                            class="w-full h-full object-cover"
+                        />
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Energy efficiency</h3>
+                    <p class="text-sm text-gray-600">
+                        Programs and tools to help you save energy and money.
+                    </p>
+                    <a href="#" class="text-primary text-sm font-semibold mt-4 inline-flex items-center gap-1 hover:gap-2 transition">
+                        Read more <i class="fas fa-chevron-right text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white hover:shadow-lg transition">
+                    <div class="h-48 bg-gray-200 rounded-lg overflow-hidden mb-4">
+                        <img
+                            src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                            alt="Entergy Future Ready"
+                            class="w-full h-full object-cover"
+                        />
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Entergy Future Ready</h3>
+                    <p class="text-sm text-gray-600">
+                        Infrastructure investments, clean energy and customer solutions for a better future.
+                    </p>
+                    <a href="#" class="text-primary text-sm font-semibold mt-4 inline-flex items-center gap-1 hover:gap-2 transition">
+                        Read more <i class="fas fa-chevron-right text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-white hover:shadow-lg transition">
+                    <div class="h-48 bg-gray-200 rounded-lg overflow-hidden mb-4">
+                        <img
+                            src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                            alt="2024 Performance Report"
+                            class="w-full h-full object-cover"
+                        />
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">2024 Performance Report</h3>
+                    <p class="text-sm text-gray-600">
+                        Read about our progress towards our common goals.
+                    </p>
+                    <a href="#" class="text-primary text-sm font-semibold mt-4 inline-flex items-center gap-1 hover:gap-2 transition">
+                        Read more <i class="fas fa-chevron-right text-xs"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest News Section -->
+    <section class="py-16 md:py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl md:text-3xl font-bold text-primary mb-12">
+                Latest news
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- News 1 -->
+                <div class="bg-white rounded-lg overflow-hidden hover:shadow-lg transition">
+                    <div class="h-48 bg-gray-200 rounded-t-lg overflow-hidden">
+                        <img
+                            src="https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                            alt="News 1"
+                            class="w-full h-full object-cover"
+                        />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg mb-2">Entergy Executive Vice President and General Counsel Marcus Brown announces plan to retire in 2026</h3>
+                        <p class="text-xs text-gray-400 mb-3">November 4, 2025</p>
+                        <p class="text-sm text-gray-600 mb-4">
+                            Entergy announced today that Marcus Brown, executive vice president and general counsel, will retire in 2026 following a successor transition. Brown will assume the role of Executive Legal Advisor to Entergy's Chair and CEO Doug Suttles.
+                        </p>
+                        <a href="#" class="text-primary text-sm font-semibold inline-flex items-center gap-1 hover:gap-2 transition">
+                            Read more <i class="fas fa-chevron-right text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- News 2 -->
+                <div class="bg-white rounded-lg overflow-hidden hover:shadow-lg transition">
+                    <div class="h-48 bg-gray-200 rounded-t-lg overflow-hidden">
+                        <img
+                            src="https://images.unsplash.com/photo-1535131749006-b7f58c99034b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                            alt="News 2"
+                            class="w-full h-full object-cover"
+                        />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg mb-2">Entergy Texas' Power to Care Golf Charity Classic raises more than $725,000 for vulnerable customers and individuals with disabilities</h3>
+                        <p class="text-xs text-gray-400 mb-3">November 6, 2025</p>
+                        <p class="text-sm text-gray-600 mb-4">
+                            More than just another day on the course, The Power to Care Golf Charity Classic turned friendly competition into meaningful support for vulnerable Southeast Texas families and individuals with disabilities. Sponsors came together at The Woodlands Country Club.
+                        </p>
+                        <a href="#" class="text-primary text-sm font-semibold inline-flex items-center gap-1 hover:gap-2 transition">
+                            Read more <i class="fas fa-chevron-right text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- News 3 -->
+                <div class="bg-white rounded-lg overflow-hidden hover:shadow-lg transition">
+                    <div class="h-48 bg-gray-200 rounded-t-lg overflow-hidden">
+                        <img
+                            src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                            alt="News 3"
+                            class="w-full h-full object-cover"
+                        />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg mb-2">Jefferson Power Station: Powering Arkansas today and into the next generation</h3>
+                        <p class="text-xs text-gray-400 mb-3">November 6, 2025</p>
+                        <p class="text-sm text-gray-600 mb-4">
+                            Entergy Arkansas is planning a major investment in the power plant's unprecedented growth and opportunity. Pending approval from the Arkansas Public Service Commission, the next steps in this journey could help build the 754-megawatt Jefferson Power Station.
+                        </p>
+                        <a href="#" class="text-primary text-sm font-semibold inline-flex items-center gap-1 hover:gap-2 transition">
+                            Read more <i class="fas fa-chevron-right text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Energy Savings Tips Section -->
+   <section class="py-16 md:py-24 bg-gradient-to-br from-blue-50 to-green-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-2xl md:text-3xl font-bold text-primary mb-4 text-center">
+            Smart Energy Savings Tips
+        </h2>
+        <p class="text-gray-600 text-center mb-12 max-w-3xl mx-auto">
+            Discover practical ways to reduce your energy consumption and save money on your monthly bills
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Tip 1 - Thermostat -->
+            <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition">
+                <div class="h-40 mb-4 rounded-lg overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Thermostat" class="w-full h-full object-cover">
+                </div>
+                <h3 class="font-bold text-lg mb-3">Optimize Temperature Settings</h3>
+                <p class="text-gray-600 text-sm">
+                    Set your thermostat to 78°F in summer and 68°F in winter. Each degree adjustment can save up to 3% on cooling/heating costs.
+                </p>
+            </div>
+
+            <!-- Tip 2 -->
+            <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition">
+                <div class="h-40 mb-4 rounded-lg overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="LED Lighting" class="w-full h-full object-cover">
+                </div>
+                <h3 class="font-bold text-lg mb-3">LED Lighting Upgrade</h3>
+                <p class="text-gray-600 text-sm">
+                    Replace incandescent bulbs with LED lights. They use 75% less energy and last 25 times longer, saving you money on replacements.
+                </p>
+            </div>
+
+            <!-- Tip 3 - Power Strips -->
+            <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition">
+                <div class="h-40 mb-4 rounded-lg overflow-hidden">
+                    <img   src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Power Strips" class="w-full h-full object-cover">
+                </div>
+                <h3 class="font-bold text-lg mb-3">Manage Phantom Loads</h3>
+                <p class="text-gray-600 text-sm">
+                    Use smart power strips to eliminate standby power consumption from electronics, which can account for 10% of your electric bill.
+                </p>
+            </div>
+        </div>
+
+        <div class="mt-12 bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+            <div class="flex flex-col md:flex-row items-center gap-6">
+                <div class="flex-1">
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Calculate Your Energy Savings</h3>
+                    <p class="text-gray-600 mb-4">
+                        Use our interactive calculator to estimate how much you could save by implementing energy-efficient practices in your home.
+                    </p>
+                    <button class="bg-primary text-white px-6 py-3 rounded-full font-semibold hover:bg-pink-700 transition">
+                        Try Savings Calculator
+                    </button>
+                </div>
+                <div class="flex-1">
+                    <div class="bg-primary rounded-xl p-4 text-white text-center">
+                        <p class="text-sm mb-2">Average Monthly Savings</p>
+                        <p class="text-3xl font-bold">$45-75</p>
+                        <p class="text-sm mt-2">for energy-conscious households</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Community Programs Section -->
+   <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-2xl md:text-3xl font-bold text-primary mb-4">
+                Community Support Programs
+            </h2>
+            <p class="text-gray-600 max-w-3xl mx-auto">
+                We're committed to supporting the communities we serve through various assistance programs and initiatives
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <!-- Left Content -->
+            <div>
+                <div class="space-y-6">
+                    <!-- Program 1 -->
+                    <div class="flex gap-4">
+                        <div class="flex-shrink-0 w-16 h-16 rounded-lg overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="The Power to Care" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg mb-2">The Power to Care</h3>
+                            <p class="text-gray-600 text-sm">
+                                Financial assistance program for elderly and disabled customers facing utility bill challenges. 
+                                Over $2 million distributed annually to qualified households.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Program 2 -->
+                    <div class="flex gap-4">
+                        <div class="flex-shrink-0 w-16 h-16 rounded-lg overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="STEM Education" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg mb-2">STEM Education Initiative</h3>
+                            <p class="text-gray-600 text-sm">
+                                Partnership with local schools to promote science, technology, engineering, and math education. 
+                                Reaching 15,000+ students annually with hands-on learning opportunities.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Program 3 -->
+                    <div class="flex gap-4">
+                        <div class="flex-shrink-0 w-16 h-16 rounded-lg overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Green Communities" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg mb-2">Green Communities</h3>
+                            <p class="text-gray-600 text-sm">
+                                Supporting local environmental projects and tree planting initiatives. 
+                                Over 50,000 trees planted in partnership with community organizations.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 bg-gray-50 rounded-xl p-6">
+                    <h4 class="font-bold text-lg mb-3">Program Impact (2024)</h4>
+                    <div class="grid grid-cols-2 gap-4 text-center">
+                        <div>
+                            <p class="text-2xl font-bold text-primary">25,000+</p>
+                            <p class="text-sm text-gray-600">Families Assisted</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl font-bold text-primary">$15M</p>
+                            <p class="text-sm text-gray-600">Community Investment</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Content - Community Support Image -->
+            <div class="relative rounded-2xl overflow-hidden bg-black">
+                <!-- <img src="https://images.unsplash.com/photo-1551135049-8a33b42738b4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Community Support" class="w-full h-full object-cover"> -->
+                <div class="bg-black flex items-center justify-center p-8 text-white">
+                    <div class="text-center">
+                        <h3 class="text-xl font-bold mb-6">Get Involved</h3>
+                        <p class="mb-6">
+                            Join our community initiatives or apply for assistance programs. Together we can build stronger, more resilient communities.
+                        </p>
+                        
+                        <div class="space-y-4 mb-8">
+                            <div class="flex items-center gap-3 justify-center">
+                                <i class="fas fa-check-circle text-white"></i>
+                                <span>Bill assistance applications</span>
+                            </div>
+                            <div class="flex items-center gap-3 justify-center">
+                                <i class="fas fa-check-circle text-white"></i>
+                                <span>Volunteer opportunities</span>
+                            </div>
+                            <div class="flex items-center gap-3 justify-center">
+                                <i class="fas fa-check-circle text-white"></i>
+                                <span>Educational partnerships</span>
+                            </div>
+                        </div>
+                        
+                        <button class="w-full bg-white text-primary py-3 rounded-xl font-semibold hover:bg-gray-100 transition">
+                            Learn About Community Programs
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Disclaimer Section -->
+    <section class="py-12 bg-yellow-50 border-t border-b border-yellow-200">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-exclamation-triangle text-yellow-600 text-2xl"></i>
+                </div>
+                <h2 class="text-xl font-bold text-yellow-800 mb-4">Important Notice</h2>
+            </div>
+            
+            <div class="bg-white rounded-xl p-6 shadow-sm border border-yellow-200">
+                <p class="text-yellow-800 text-center">
+                    <strong>Disclaimer:</strong> This demonstration website is not affiliated with, endorsed by, or connected to the actual Entergy Corporation. 
+                    The content, design, and information presented here are for educational and portfolio demonstration purposes only. 
+                    This is a fictional recreation meant to showcase web development skills and should not be considered an official Entergy website. 
+                    For accurate information about Entergy's services.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white">
+        <!-- Main footer content -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <!-- Search Section -->
+            <div class="mb-12 text-center">
+                <h2 class="text-3xl font-bold mb-6">We power life.</h2>
+                <div class="flex flex-col sm:flex-row gap-3 justify-center max-w-md mx-auto">
+                    <input
+                        type="text"
+                        placeholder="I'm looking for"
+                        class="flex-1 px-4 py-3 rounded-full text-black placeholder-gray-500"
+                    />
+                    <button class="bg-primary px-6 py-3 rounded-full font-semibold hover:bg-pink-700 transition flex items-center justify-center gap-2 whitespace-nowrap">
+                        <i class="fas fa-search text-sm"></i>
+                        Search
+                    </button>
+                </div>
+
+                <!-- App Store Links -->
+                <div class="flex gap-3 justify-center mt-4">
+                    <button class="flex items-center gap-2 bg-white text-black px-4 py-2 rounded-lg text-sm font-semibold hover:bg-gray-200 transition">
+                        <i class="fab fa-apple"></i>
+                        App Store
+                    </button>
+                    <button class="flex items-center gap-2 bg-white text-black px-4 py-2 rounded-lg text-sm font-semibold hover:bg-gray-200 transition">
+                        <i class="fab fa-google-play"></i>
+                        Google Play
+                    </button>
+                </div>
+            </div>
+
+            <!-- Footer Links Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+                <!-- Our companies -->
+                <div>
+                    <h3 class="font-bold mb-4 text-white">Our companies</h3>
+                    <ul class="space-y-3 text-sm text-gray-300">
+                        <li><a href="#" class="hover:text-white transition">Entergy Arkansas</a></li>
+                        <li><a href="#" class="hover:text-white transition">Entergy Louisiana</a></li>
+                        <li><a href="#" class="hover:text-white transition">Entergy Mississippi</a></li>
+                        <li><a href="#" class="hover:text-white transition">Entergy New Orleans</a></li>
+                        <li><a href="#" class="hover:text-white transition">Entergy Texas</a></li>
+                    </ul>
+                </div>
+
+                <!-- myEntergy account -->
+                <div>
+                    <h3 class="font-bold mb-4 text-white">myEntergy account</h3>
+                    <ul class="space-y-3 text-sm text-gray-300">
+                        <li><a href="#" class="hover:text-white transition">Reset my online</a></li>
+                        <li><a href="#" class="hover:text-white transition">Make a payment</a></li>
+                        <li><a href="#" class="hover:text-white transition">Login or sign up</a></li>
+                        <li><a href="#" class="hover:text-white transition">Account support</a></li>
+                    </ul>
+                </div>
+
+                <!-- Additional links -->
+                <div>
+                    <h3 class="font-bold mb-4 text-white">Additional links</h3>
+                    <ul class="space-y-3 text-sm text-gray-300">
+                        <li><a href="#" class="hover:text-white transition">Outages</a></li>
+                        <li><a href="#" class="hover:text-white transition">Entergy surveys in progress</a></li>
+                    </ul>
+                </div>
+
+                <!-- Connect with us -->
+                <div>
+                    <h3 class="font-bold mb-4 text-white">Connect with us</h3>
+                    <ul class="space-y-3 text-sm text-gray-300">
+                        <li><a href="#" class="hover:text-white transition">Contact us</a></li>
+                        <li><a href="#" class="hover:text-white transition">@Entergy on social media</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Footer -->
+            <div class="border-t border-gray-800 pt-8">
+                <p class="text-sm text-gray-400 mb-4">
+                    © 2025 Entergy Corporation. All rights reserved.
+                </p>
+
+                <!-- Policies and Disclaimers -->
+                <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 text-xs text-gray-400">
+                    <a href="#accessibility" class="hover:text-white transition">
+                        Accessibility
+                    </a>
+                    <a href="#privacy" class="hover:text-white transition">
+                        Privacy policy
+                    </a>
+                    <a href="#terms" class="hover:text-white transition">
+                        Terms of use
+                    </a>
+                </div>
+
+                <!-- Additional Disclaimer Text -->
+                <div class="mt-6 text-xs text-gray-500 max-w-4xl">
+                    <p class="mb-3">
+                        <strong>Disclaimer:</strong> This website contains forward-looking statements that are subject to risks and uncertainties. Actual results may differ materially from those projected. Entergy assumes no obligation to update any forward-looking statements.
+                    </p>
+                    <p class="mb-3">
+                        <strong>Regulatory Notice:</strong> Information on this website is provided in accordance with state and federal regulations. Rates and services may vary by region. Please refer to official rate schedules for current pricing.
+                    </p>
+                    <p>
+                        <strong>Data Privacy:</strong> Your personal information is protected according to our privacy policy. We do not share customer data without consent, except as required by law. For more information, please review our complete privacy policy.
+                    </p>
+                </div>
+
+                <!-- Scroll to top -->
+                <button id="scroll-to-top" class="mt-8 p-2 rounded-full bg-gray-800 hover:bg-gray-700 transition">
+                    <i class="fas fa-chevron-up"></i>
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Scroll to top functionality
+        document.getElementById('scroll-to-top').addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const menu = document.getElementById('mobile-menu');
+            const button = document.getElementById('mobile-menu-button');
+            
+            if (!menu.contains(event.target) && !button.contains(event.target) && !menu.classList.contains('hidden')) {
+                menu.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
