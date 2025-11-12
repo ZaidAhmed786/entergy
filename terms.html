@@ -28,9 +28,58 @@
         .mobile-menu {
             transition: all 0.3s ease;
         }
+   
+@media (max-width: 768px) {
+   .sticky-popup {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 70%;
+}
+
+}
     </style>
 </head>
-<body class="bg-white">
+<body>
+
+<!-- ✅ STICKY POPUP -->
+<div class="sticky-popup w-[90%]  text-center md:hidden bg-white rounded-lg shadow-lg z-[999]">
+
+  <a href="tel:+18554477032">
+    <button class="bg-primary text-white px-4 py-3 text-sm font-semibold hover:bg-pink-700 transition w-full">
+      Call Us : +1 (855) 447-7032
+    </button>
+  </a>
+
+  <div class="text-center">
+
+    <div class="mb-2 mt-5">
+      <h2 class="text-lg font-semibold">Call to Pay Your Bill Now</h2>
+    </div>
+
+    <div>
+      <img 
+        src="./EntergyLogo-white-1210x423.webp" 
+        alt="" 
+        class="mx-auto w-1/2"
+      >
+    </div>
+
+    <a href="tel:+18442094073">
+      <button class="bg-primary text-white px-4 py-3 text-base font-semibold rounded w-1/2 mb-5 hover:bg-pink-700  transition">
+        Call Us : (844) 209-4073
+      </button>
+    </a>
+
+  </div>
+
+  <a href="tel:+18554477032">
+    <button class="bg-primary text-white px-4 py-3 text-sm font-semibold hover:bg-pink-700 transition w-full">
+      Call Us : +1 (855) 447-7032
+    </button>
+  </a>
+
+</div>
     <!-- Header -->
     <header class="bg-white border-b border-gray-200 sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -41,35 +90,52 @@
                 </a>
 
                 <!-- Desktop Navigation -->
-                <nav class="hidden md:flex items-center gap-8">
-                    <a  class="text-sm text-gray-700 hover:text-primary font-medium">
-                        Customers
-                    </a>
-                    <a class="text-sm text-gray-700 hover:text-primary font-medium">
-                        Communities
-                    </a>
-                    <a  class="text-sm text-gray-700 hover:text-primary font-medium">
-                        Investors
-                    </a>
-                    <a  class="text-sm text-gray-700 hover:text-primary font-medium">
-                        Operations
-                    </a>
-                    <a  class="text-sm text-gray-700 hover:text-primary font-medium">
-                        Newsroom
-                    </a>
-                    <a  class="text-sm text-gray-700 hover:text-primary font-medium">
-                        About us
-                    </a>
-                    <a  class="text-sm text-gray-700 hover:text-primary font-medium">
-                        Outages
-                    </a>
-                </nav>
+                 <nav class="hidden md:flex items-center gap-8 relative">
+
+  <a class="text-sm text-gray-700 hover:text-primary font-medium">
+    Customers
+  </a>
+  <a class="text-sm text-gray-700 hover:text-primary font-medium">
+    Communities
+  </a>
+  
+  <a class="text-sm text-gray-700 hover:text-primary font-medium">
+    About us
+  </a>
+  <a class="text-sm text-gray-700 hover:text-primary font-medium">
+    Outages
+  </a>
+
+
+  <!-- ✅ POLICIES DROPDOWN -->
+  <div class="relative">
+    <button 
+      id="policiesBtn" 
+      class="text-sm text-gray-700 hover:text-primary font-medium flex items-center gap-1"
+    >
+      Policies ▼
+    </button>
+
+    <!-- Dropdown -->
+    <div 
+      id="policiesMenu" 
+      class="absolute hidden bg-white shadow-lg rounded-md mt-2 w-40 border border-gray-200 z-20"
+    >
+      <a href="privacy.html" class="block px-4 py-2 text-sm hover:bg-gray-100">Privacy Policy</a>
+      <a href="refund.html" class="block px-4 py-2 text-sm hover:bg-gray-100">Refund Policy</a>
+      <a href="terms.html" class="block px-4 py-2 text-sm hover:bg-gray-100">Terms & Conditions</a>
+      <a href="disclaimer.html" class="block px-4 py-2 text-sm hover:bg-gray-100">Disclaimer</a>
+
+    </div>
+  </div>
+
+</nav>
 
                 <!-- Right side -->
                 <div class="flex items-center gap-4">
                     <a href="tel:+18554477032">
                         <button class="bg-primary text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-pink-700 transition">
-                            Call Us : +18554477032
+                            Call Us : (855) 447-7032
                         </button>
                     </a>
                     
@@ -242,7 +308,7 @@
         });
 
         // Close mobile menu when clicking outside
-        document.addEventListener('click', function(event) {
+      document.addEventListener('click', function(event) {
             const menu = document.getElementById('mobile-menu');
             const button = document.getElementById('mobile-menu-button');
             
@@ -250,6 +316,19 @@
                 menu.classList.add('hidden');
             }
         });
+        const policiesBtn = document.getElementById("policiesBtn");
+  const policiesMenu = document.getElementById("policiesMenu");
+
+  policiesBtn.addEventListener("click", () => {
+    policiesMenu.classList.toggle("hidden");
+  });
+
+  // Click outside → close
+  document.addEventListener("click", (e) => {
+    if (!policiesBtn.contains(e.target) && !policiesMenu.contains(e.target)) {
+      policiesMenu.classList.add("hidden");
+    }
+  });
     </script>
 </body>
 </html>
